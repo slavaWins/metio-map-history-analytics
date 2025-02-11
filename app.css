@@ -1,0 +1,70 @@
+body {
+    background: #444;
+    font-size: 17px;
+    font-family: sans-serif, Arial;
+    color: #bababa;
+    font-weight: 900;
+    padding: 40px;
+}
+
+
+.map {
+    background: rgba(255, 255, 255, 0.23);
+    display: block;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+ aspect-ratio: 3/1;
+}
+
+.point {
+    background: rgba(227, 27, 27, 1);
+    opacity: 0.7;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0px;
+    padding-top: 40px;
+    transition: 0.1s;
+}
+.point:hover{
+    z-index: 10;
+    opacity: 1;
+    transition: 0.1s;
+}
+.point > .hover{
+    display: none;
+    opacity: 0;
+    width: 320px;
+    height: 120px;
+    background: #444;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    left: 60%;
+    bottom: 60%;
+    text-align: left;
+}
+.point:hover>.hover{
+    display: block;
+    opacity: 1;
+    transition: 0.1s;
+}
+.nav>a{
+    color: #fff;
+    text-decoration: none;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.69);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.nav{
+    font-size: 1.2em;
+    padding: 10px;
+    margin-left: -15px;
+}
