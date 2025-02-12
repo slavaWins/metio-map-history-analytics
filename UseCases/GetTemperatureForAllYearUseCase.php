@@ -20,7 +20,7 @@
 
         }
 
-        public function GetData($from, $to) {
+        public function GetData(array $years) {
 
 
             $mapPoints = $this->_pointsDataStorage->getPoints();
@@ -30,8 +30,7 @@
 
             $mapDataWithYear = [];
 
-            for ($year = $from; $year <= $to; $year++) {
-
+            foreach ($years as $year) {
 
                 $mapDataWithYear[$year] = [];
 
@@ -41,6 +40,8 @@
 
                     $point['t'] = $result;
 
+                    unset($point['lat']);
+                    unset($point['long']);
                     $mapDataWithYear[$year] [] = $point;
                 }
 
