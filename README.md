@@ -20,16 +20,24 @@
 # Что удалось заметить?
 Если рассматривать данные с крупным временным шагом (10–15 лет),
 ![img.png](imgs/img.png)
-get_temperature_by_year.php
+get_temperatures_by_step.php?step=15
 
 становится очевидным тренд глобального потепления: 
 температуры действительно растут. 
 
 
+### Мелкий шаг
 Однако, если анализировать с более мелким шагом (например, 1–3 года), проявляются интересные циклы.
 ![img_1.png](imgs/img_1.png)
-get_temperature_by_year.php
+get_temperatures_by_step.php?step=3
 
+
+### Средняя температура по всем городам с мелким шагом
+![img.png](img.png)
+get_middle_temperatures_by_step.php?step=1
+
+
+<BR>
 Кажется, что существуют периоды примерно в 15 лет, когда средняя температура сначала повышается, а затем снова понижается.
 
 
@@ -38,8 +46,9 @@ get_temperature_by_year.php
 
 # Тех часть
 
-get_temperature_by_year.php - график по всем городам с шагом
-get_temperature_by_all_years.php - api метод чтоб получить все данные по всем городам за конкретный год
+get_temperatures_by_step.php?step=3 - график по всем городам с шагом
+get_temperature_by_year.php?year=1960 - api метод чтоб получить все данные по всем городам за конкретный год
+get_middle_temperatures_by_step.php?step=3 - график средней температуры по всем городам за все годы, с шагом step
 
 index.php - тепловая карта, не доделана. Мало данных.
 ![img_2.png](imgs/img_2.png)
